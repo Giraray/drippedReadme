@@ -61,6 +61,7 @@ fn quintic(p: vec2<f32>) -> vec2<f32> {
 @fragment fn fragMain(fsInput: OurVertexShaderOutput) -> @location(0) vec4f {
     var uv = (fsInput.fragCoord - uResolution.xy * 0.5) / min(uResolution.x, uResolution.y);
     uv += vec2(uSeed*0.13, uSeed*0.23);
+    // uv.x *= 0.5;
 
     uv *= uGridSize;
     
